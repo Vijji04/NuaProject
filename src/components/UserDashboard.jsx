@@ -4,8 +4,7 @@ import { db } from "../config/Firebase";
 import { Fragment } from "react";
 import { Disclosure, Menu, Transition } from "@headlessui/react";
 import { BellIcon } from "@heroicons/react/24/outline";
-import UserComponent from "./UserComponent";
-import Sidebar from "./Sidebar";
+
 import DataTable from "./DataTable";
 import { signOut } from "firebase/auth";
 import { auth } from "../config/Firebase";
@@ -83,7 +82,7 @@ export default function UserDashboard({ user }) {
       <div className="h-screen flex overflow-hidden bg-gray-100">
         {/* Sidebar */}
 
-        <Sidebar />
+
 
         {/* Main content area */}
         <div className="flex flex-col w-0 flex-1 overflow-hidden">
@@ -176,7 +175,6 @@ export default function UserDashboard({ user }) {
             <div className="py-6">
               <div className="mx-auto max-w-7xl px-4 sm:px-6 md:px-8">
                 {/* Replace with your content */}
-                <UserComponent names={names} courses={courses} />
 
                 <div className="mt-10">
                   <DataTable></DataTable>
